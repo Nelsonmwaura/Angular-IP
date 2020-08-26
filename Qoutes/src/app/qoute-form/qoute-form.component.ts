@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Qoutes } from '../qoute';
+
+
 
 @Component({
   selector: 'app-qoute-form',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QouteFormComponent implements OnInit {
 
+  newQoute = new Qoutes(0, "", "", new Date());
+  @Output() addQoute = new EventEmitter<Qoutes>();
+
+  submitQoute() {
+    this.addQoute.emit(this.newQoute);
+  }
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

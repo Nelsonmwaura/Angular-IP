@@ -1,21 +1,23 @@
 <div class="container">
-  <h1>Get Inspired</h1>
+  <h1>MY GOALS</h1>
   <hr>
 
   <div class="row">
     <div class="col-md-6">
-      <div *ngFor='let qoutes of qoutes;let i = index'>
+      <div *ngFor='let qoute of qoute;let i = index'>
         <div>
+          <h6 id={{i}} appStrikethrough>{{qoute.name}} due on {{qoute.completeDate|date|uppercase}}</h6>
           <button (click)='AuthorDetails(i)' class="btn btn-primary">Author</button>
         </div>
 
-        <div *ngIf='qoutes.showDescription'>
-          <app-qoute-detail  [qoute]='qoute' (isComplete) = 'deleteQoutes($event,i)'></app-qoute-detail>
+        <div *ngIf='qoute.showDescription'>
+          <app-qoute-detail  [qoute]='qoute' (isComplete) = 'deleteQoute($event,i)'></app-qoute-detail>
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <app-qoute-form></app-qoute-form>
-    </div>
+      <app-qoute-form (addQoute)="addNewQoute($event)"></app-qoute-form>
+ </div>
   </div>
+  
 </div>

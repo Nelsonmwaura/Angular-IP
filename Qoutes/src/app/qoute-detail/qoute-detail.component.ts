@@ -16,6 +16,10 @@ export class QouteDetailComponent implements OnInit {
     this.isComplete.emit(complete);
   }
   
+  qouteDelete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
