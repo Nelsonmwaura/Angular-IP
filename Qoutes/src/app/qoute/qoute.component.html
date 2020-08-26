@@ -1,21 +1,21 @@
 <div class="container">
-    <h1>Get Inspired</h1>
-    <hr>
-  
-    <div class="row">
-      <div class="col-md-6">
-        <div *ngFor='let qoutes of qoutes;let i = index'>
-          <div>
-            <button (click)='AuthorDetails(i)' class="btn btn-primary">Author</button>
-          </div>
-  
-          <div *ngIf='qoutes.showDescription'>
-            <app-qoute-detail  [qoutes]='qoutes' (isComplete) = 'deleteQoutes($event,i)'></app-qoute-detail>
-          </div>
+  <h1>Get Inspired</h1>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let qoutes of qoutes;let i = index'>
+        <div>
+          <button (click)='AuthorDetails(i)' class="btn btn-primary">Author</button>
+        </div>
+
+        <div *ngIf='qoutes.showDescription'>
+          <app-qoute-detail  [qoute]='qoute' (isComplete) = 'deleteQoutes($event,i)'></app-qoute-detail>
         </div>
       </div>
-      <div class="col-md-6">
-        <app-qoute-form></app-qoute-form>
-      </div>
+    </div>
+    <div class="col-md-6">
+      <app-qoute-form></app-qoute-form>
     </div>
   </div>
+</div>
