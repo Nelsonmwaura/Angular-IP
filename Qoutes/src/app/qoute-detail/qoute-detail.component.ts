@@ -12,8 +12,10 @@ export class QouteDetailComponent implements OnInit {
   @Input() qoute:Qoutes;
   @Output() isComplete = new EventEmitter<boolean>();
 
-
-
+  qoutesComplete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
+  
   constructor() { }
 
   ngOnInit(): void {
