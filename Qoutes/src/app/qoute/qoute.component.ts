@@ -27,7 +27,9 @@ export class QouteComponent implements OnInit {
     }
   }
 
-
+  AuthorDetails(index){
+    this.qoute[index].showDescription = !this.qoute[index].showDescription;
+  }
 
 
 
