@@ -1,8 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Qoutes } from '../qoute';
 
-
-
 @Component({
   selector: 'app-qoute-form',
   templateUrl: './qoute-form.component.html',
