@@ -21,7 +21,11 @@ export class QouteComponent implements OnInit {
     this.qoute[index].showDescription = !this.qoute[index].showDescription;
   }
 
-
+  completeQoutes(isComplete, index){
+    if (isComplete) {
+      this.qoute.splice(index,1);
+    }
+  }
 
 
 
