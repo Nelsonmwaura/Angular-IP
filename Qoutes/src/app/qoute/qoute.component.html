@@ -9,7 +9,6 @@
           <h6 id={{i}} appStrikethrough>{{qoute.name}} created on {{qoute.completeDate|date|uppercase}}</h6>
           <button (click)='AuthorDetails(i)' class="btn btn-primary">Author</button>
         </div>
-
         <div *ngIf='qoute.showDescription'>
           <app-qoute-detail  [qoute]='qoute' (isComplete) = 'deleteQoute($event,i)'></app-qoute-detail>
         </div>
@@ -19,5 +18,5 @@
       <app-qoute-form (addQoute)="addNewQoute($event)"></app-qoute-form>
  </div>
   </div>
-  
+  <div>
 </div>
