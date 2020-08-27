@@ -11,6 +11,7 @@
         </div>
         <div *ngIf='qoute.showDescription'>
           <app-qoute-detail  [qoute]='qoute' (isComplete) = 'deleteQoute($event,i)'></app-qoute-detail>
+          <app-like></app-like>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ likeButtonClick(){
 }
 
 dislikeButtonClick(){
-  this.numberOfLikes
+  this.numberOfLikes--;
 }
 
   constructor() { }
