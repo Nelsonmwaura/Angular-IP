@@ -9,6 +9,15 @@ export class LikeComponent implements OnInit {
 
   numberOfLikes :number;
 
+likeButtonClick(){
+  this.numberOfLikes++;
+}
+
+dislikeButtonClick(){
+  this.numberOfLikes--;
+}
+
+
   constructor() { }
 
   ngOnInit(): void {
