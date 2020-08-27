@@ -4,7 +4,7 @@
     <form (ngSubmit)='submitQoute()' #qouteForm='ngForm'>
         <div class="form-group">
   
-            <label for="name">Author</label>
+            <label for="name">Qoute</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newQoute.name" name="name" #name='ngModel' required>
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
               <p>Author is required</p>
@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
   
-            <label for="description">Qoute</label>
+            <label for="description">Author</label>
             <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQoute.description" name="description" #description="ngModel" required></textarea>
             <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
               <p>Qoute is required</p>
