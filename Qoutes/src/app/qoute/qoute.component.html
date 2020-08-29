@@ -1,26 +1,26 @@
 <div class="container">
-  <h1>Qoutes</h1>
+  <h1>Quotes</h1>
   <hr>
   <div class="alert alert-warning" role="alert">We willl have more qoutes for you, Soon...</div>
   <div class="row">
     <div class="col-md-6">
       <div class="alert alert-info text-white" *ngFor='let qoute of qoute;let i = index'>
         <div class="col-sm">
-        <div>
-          <h6 id={{i}} appStrikethrough>{{qoute.name}} created on {{qoute.completeDate|date|uppercase}}</h6>
-          <button (click)='AuthorDetails(i)' class="btn btn-success">Author</button>
-        </div>
-        <div *ngIf='qoute.showDescription'>
-          <app-qoute-detail  [qoute]='qoute' (isComplete) = 'deleteQoute($event,i)'></app-qoute-detail>
-          <app-like></app-like>
+          <div>
+            <h6 id={{i}} appStrikethrough>{{qoute.name}} created on {{qoute.completeDate|date|uppercase}}</h6>
+            <button (click)='AuthorDetails(i)' class="btn btn-success">Author</button>
+          </div>
+          <div *ngIf='qoute.showDescription'>
+            <app-qoute-detail [qoute]='qoute' (isComplete)='deleteQoute($event,i)'></app-qoute-detail>
+            <app-like></app-like>
+          </div>
         </div>
       </div>
     </div>
-    </div>
     <div class="col-md-6">
       <app-qoute-form (addQoute)="addNewQoute($event)"></app-qoute-form>
- </div>
+    </div>
   </div>
-  
+
   <div>
-</div>
+  </div>
